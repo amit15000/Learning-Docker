@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Docker's commonly used Commands
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains commonly used Docker commands for reference. Whether you're a beginner or an experienced user, these commands will help you efficiently manage your Docker containers and images.
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+Below are some commonly used Docker commands along with a brief description of each:
 
-### `npm start`
+### Build Docker image
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `$ docker build .`: Build Docker image from the Dockerfile in the current directory.
+- `$ docker build -t "studynotion:1.0" .`: Build Docker image with a specified tag.
+- `$ docker build -t "studynotion:1.0" .`: ERROR - Image name should be in lowercase.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### List Docker images
 
-### `npm test`
+- `$ docker images ls`: List all Docker images on the system.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Run Docker container
 
-### `npm run build`
+- `$ docker run f208561303b4`: Run Docker container from the specified image.
+- `$ docker run --rm -d --name "studynotion" -p 3001:3000 f208561303b4`: Run Docker container with port mapping and a specified name.
+- `$ docker run --rm -d --name "studynotion" -p 3001:3000 f208561303b4`: Another option with the same container name.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Stop Docker container
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `$ docker stop studynotion`: Stop Docker container by container name.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### List Docker containers
 
-### `npm run eject`
+- `$ docker ps`: List running Docker containers.
+- `$ docker ps -a`: List all Docker containers.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Remove Docker container
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `$ docker rm b8afa5eaaf18 dc6a7389ba91 697ca78367f9`: Remove Docker containers by container ID.
+- `$ docker stop b8afa5eaaf18 dc6a7389ba91 697ca78367f9`: Stop multiple Docker containers by container ID.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Additional Docker Commands
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `$ docker system prune -a`: Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
+- `$ docker-compose up -d`: Start Docker containers defined in the `docker-compose.yml` file in detached mode.
+- `$ docker-compose down`: Stop and remove Docker containers defined in the `docker-compose.yml` file.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contribute to this repository by adding more useful Docker commands or by improving the existing ones. If you have any questions or suggestions, please feel free to open an issue or pull request. Happy Dockering! 🐳
