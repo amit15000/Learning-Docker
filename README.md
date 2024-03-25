@@ -37,6 +37,11 @@ Below are some commonly used Docker commands along with a brief description of e
 - `$ docker stop b8afa5eaaf18 dc6a7389ba91 697ca78367f9`: Stop multiple Docker containers by container ID.
 
 ### Additional Docker Commands
+- `$ docker run --rm --name nameSave -v myVolume:/sumP  -it name_info:1.0`: Create volume named myVolume in the sumP Directory.
+
+
+
+### Additional Docker Commands
 
 - `$ docker system prune -a`: Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
 - `$ docker-compose up -d`: Start Docker containers defined in the `docker-compose.yml` file in detached mode.
