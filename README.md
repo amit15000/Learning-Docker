@@ -38,6 +38,7 @@ Below are some commonly used Docker commands along with a brief description of e
 
 ### Additional Docker Commands
 - `$ docker run --rm --name nameSave -v myVolume:/sumP  -it name_info:1.0`: Create volume named myVolume in the sumP Directory.
+- `$ docker run --rm -v D:\Btech\Projects\WebD\Docker-py\servers.txt:/pythonProjects/mountBind/servers.txt -it image_name`: Mount(Bind) local file to container.
 
 
 
@@ -46,6 +47,7 @@ Below are some commonly used Docker commands along with a brief description of e
 - `$ docker system prune -a`: Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
 - `$ docker-compose up -d`: Start Docker containers defined in the `docker-compose.yml` file in detached mode.
 - `$ docker-compose down`: Stop and remove Docker containers defined in the `docker-compose.yml` file.
+- 
 
 ## License
 
